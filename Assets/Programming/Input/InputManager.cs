@@ -4,7 +4,8 @@ enum InputState
 {
     None,
     Movement,
-    Dialogue
+    Dialogue,
+    Tower
 }
 
 public class InputManager : MonoBehaviour
@@ -33,6 +34,7 @@ public class InputManager : MonoBehaviour
         inputState = _state;
 
         if (inputState == InputState.Movement) input.SetMovement();
-        else if (inputState == InputState.Dialogue) input.SetDialogue();
+        if (inputState == InputState.Dialogue) input.SetDialogue();
+        if (inputState == InputState.Tower) input.SetTower();
     }
 }
