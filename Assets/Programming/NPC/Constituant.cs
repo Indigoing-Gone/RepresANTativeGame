@@ -24,7 +24,7 @@ public class Constituant : MonoBehaviour, IInteractable
     private void Awake()
     {
         speaker = GetComponent<Speaker>();
-        canStartTower = true;
+        //canStartTower = true;
     }
 
     public void Interact()

@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 89f4a649b72ae1e4c9cf7a7909482ee6
+guid: ed88a55f05628ac429ab1d22e25f395e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8397283714733087140
-    second: ant_mc1_spritesheet_0
+      213: 5261507862600633459
+    second: AntDialogueBox 1_0
   - first:
-      213: -4945952643831699607
-    second: ant_mc1_spritesheet_1
-  - first:
-      213: 5336696115507683981
-    second: ant_mc1_spritesheet_2
-  - first:
-      213: -7836614529764869219
-    second: ant_mc1_spritesheet_3
-  - first:
-      213: -9034405659122139496
-    second: ant_mc1_spritesheet_4
+      213: -9186088154096431582
+    second: AntDialogueBox 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -112,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ant_mc1_spritesheet_0
+      name: AntDialogueBox 1_0
       rect:
         serializedVersion: 2
-        x: 230
-        y: 1145
-        width: 812
-        height: 802
+        x: 1469
+        y: 1976
+        width: 3181
+        height: 1283
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c566921c3fad67b80800000000000000
-      internalID: -8397283714733087140
+      spriteID: 37c4c3d3681a40940800000000000000
+      internalID: 5261507862600633459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ant_mc1_spritesheet_1
+      name: AntDialogueBox 1_1
       rect:
         serializedVersion: 2
-        x: 1343
-        y: 1145
-        width: 814
-        height: 798
+        x: 4642
+        y: 2449
+        width: 9
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,74 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 967e18476427c5bb0800000000000000
-      internalID: -4945952643831699607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ant_mc1_spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 230
-        y: 181
-        width: 812
-        height: 814
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d82ea0f87d0cf0a40800000000000000
-      internalID: 5336696115507683981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ant_mc1_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1355
-        y: 187
-        width: 812
-        height: 808
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9b33b7fa90ce3390800000000000000
-      internalID: -7836614529764869219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ant_mc1_spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 3147
-        y: 514
-        width: 11
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89efe3b5be75f9280800000000000000
-      internalID: -9034405659122139496
+      spriteID: 22e88ab6e75748080800000000000000
+      internalID: -9186088154096431582
       vertices: []
       indices: 
       edges: []
@@ -225,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5bb99db3c0a67f946ad0e4838ec6f74e
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ant_mc1_spritesheet_0: -8397283714733087140
-      ant_mc1_spritesheet_1: -4945952643831699607
-      ant_mc1_spritesheet_2: 5336696115507683981
-      ant_mc1_spritesheet_3: -7836614529764869219
-      ant_mc1_spritesheet_4: -9034405659122139496
+      AntDialogueBox 1_0: 5261507862600633459
+      AntDialogueBox 1_1: -9186088154096431582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
