@@ -27,6 +27,8 @@ public class TowerManager : MonoBehaviour
     private Coroutine countdownRoutine;
     public bool stable;
 
+    private List<GameObject> buildingAreas;
+
     public TextMeshProUGUI countdownText;
 
     public bool complete;
@@ -58,6 +60,7 @@ public class TowerManager : MonoBehaviour
     {
         goalLine = GetComponent<LineRenderer>();
         blocks = FindObjectsByType<BlockController>(FindObjectsSortMode.None).ToList();
+        buildingAreas = GameObject.FindGameObjectsWithTag("BuildingArea").ToList();
 
         heightGoal = CalculateHeightGoal();
         UpdateGoal();
@@ -129,10 +132,61 @@ public class TowerManager : MonoBehaviour
         yield break;
     }
 
+    // Updates building area visuals based on if block placement is valid
+    void UpdateBuildingAreas(bool valid)
+    {
+        Color newCol = valid ? Color.green : Color.red;
+        newCol.a = 0.25f;
+        foreach (GameObject area in buildingAreas)
+        {
+            area.GetComponent<SpriteRenderer>().color = newCol;
+        }
+    }
+
+    // Returns if given block is inside building area
+    bool IsInBuildingArea(BlockController block)
+    {
+        if (!block.touchingGround) return true;
+
+        float blockX = block.transform.position.x;
+        foreach (GameObject area in buildingAreas)
+        {
+            float areaX = area.transform.position.x;
+            float areaHalfWidth = area.transform.localScale.x / 2; 
+            if (blockX >= areaX - areaHalfWidth && blockX <= areaX + areaHalfWidth)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Returns if all blocks are in the building area
+    bool AreBlocksInBuildingArea()
+    {
+        foreach (BlockController block in blocks)
+        {
+            if (!IsInBuildingArea(block))
+            {
+                UpdateBuildingAreas(false);
+                return false;
+            }
+        }
+        print("aaaa");
+        UpdateBuildingAreas(true);
+        return true;
+    }
+
     // Returns if the tower has reached the goal
     bool IsComplete()
     {
-        foreach(BlockController block in blocks)
+        if (!AreBlocksInBuildingArea()) return false;
+
+        Vector2 leftBound = new(bounds[0], heightGoal);
+        Vector2 rightBound = new(bounds[1], heightGoal);
+        if (!Physics2D.Linecast(leftBound, rightBound, blockMask)) return false;
+
+        foreach (BlockController block in blocks)
         {
             if (block.Clicked ||
                 block.GetComponent<Rigidbody2D>().linearVelocity.magnitude > speedThreshold)
@@ -141,9 +195,7 @@ public class TowerManager : MonoBehaviour
             }
         }
 
-        Vector2 leftBound = new(bounds[0], heightGoal);
-        Vector2 rightBound = new(bounds[1], heightGoal);
-        return Physics2D.Linecast(leftBound, rightBound, blockMask);
+        return true;
     }
 
     // Calculates the height of the goal line and returns it

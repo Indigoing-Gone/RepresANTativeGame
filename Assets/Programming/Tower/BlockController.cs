@@ -19,6 +19,9 @@ public class BlockController : MonoBehaviour
     public bool Clicked => clicked;
     private Vector2 mousePos;
 
+    // Collision
+    public bool touchingGround;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +55,18 @@ public class BlockController : MonoBehaviour
         {
             transform.eulerAngles += new Vector3(0.0f, 0.0f, theta);
         }
+    }
+
+    // Collision handling
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground")) touchingGround = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground")) touchingGround = false;
     }
 
     // Basic Input
