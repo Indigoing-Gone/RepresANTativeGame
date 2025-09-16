@@ -309,9 +309,8 @@ MonoBehaviour:
   countdownText: {fileID: 713595320}
   complete: 0
   speedThreshold: 0.1
-  goalMultiplier: 0.75
+  goalMultiplier: 0.7
   initialTowerHeight: 0
-  heightGoal: 0
   bounds: {x: 0, y: 0, z: 0, w: 0}
 --- !u!120 &325058502
 LineRenderer:
