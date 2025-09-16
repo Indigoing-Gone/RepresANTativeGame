@@ -13,6 +13,9 @@ public class TowerManager : MonoBehaviour
     // Singleton
     public static TowerManager Instance;
 
+    // Game
+    private bool playing;
+
     // Goal line
     private LineRenderer goalLine;
     public float width;
@@ -77,10 +80,6 @@ public class TowerManager : MonoBehaviour
         goalLine = GetComponent<LineRenderer>();
         blocks = FindObjectsByType<BlockController>(FindObjectsSortMode.None).ToList();
         buildingAreas = GameObject.FindGameObjectsWithTag("BuildingArea").ToList();
-
-        heightGoal = CalculateHeightGoal();
-        UpdateGoal();
-
         countdown = timeToStable;
         countdownText.enabled = false;
     }
@@ -89,6 +88,9 @@ public class TowerManager : MonoBehaviour
     {
         AddBlocks(_blocks);
         StartingTower?.Invoke();
+        heightGoal = CalculateHeightGoal();
+        UpdateGoal();
+        playing = true;
     }
 
     void UpdateCountdownText()
@@ -147,7 +149,13 @@ public class TowerManager : MonoBehaviour
             }
         }
         countdown = 0;
-        if (complete) stable = true;
+        // Game has been completed
+        if (complete)
+        {
+            stable = true;
+            playing = false;
+            EndingTower?.Invoke();
+        }
         else countdown = timeToStable;
         UpdateCountdownText();
         StartCoroutine(FadeTextOut());
@@ -168,6 +176,7 @@ public class TowerManager : MonoBehaviour
     // Returns if given block is inside building area
     bool IsInBuildingArea(BlockController block)
     {
+        if (block.Clicked) return false;
         if (!block.touchingGround || buildingAreas.Count == 0) return true;
 
         float blockX = block.transform.position.x;
@@ -279,8 +288,7 @@ public class TowerManager : MonoBehaviour
         UpdateGoal();
     }
 
-    // Update is called once per frame
-    void Update()
+    void PlayGame()
     {
         if (complete != IsComplete())
         {
@@ -291,8 +299,14 @@ public class TowerManager : MonoBehaviour
                 if (countdownRoutine != null) StopCoroutine(countdownRoutine);
                 countdownRoutine = StartCoroutine(CountdownRoutine());
             }
-            else  stable = false;
+            else stable = false;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (playing) PlayGame();
 
         // -- TEMPORARY TEST CODE --
         //if (Time.time % 5 < 0.01f)
