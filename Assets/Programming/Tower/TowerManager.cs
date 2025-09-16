@@ -232,32 +232,8 @@ public class TowerManager : MonoBehaviour
     // Calculates the height of the goal line and returns it
     float CalculateHeightGoal()
     {
-        float heightAvg = 0;
-        int B = blocks.Count;
-        foreach (BlockController block in blocks) heightAvg += block.height;
-        heightAvg /= B;
-        /* 
-         * Assuming each block is of height heightAvg, we can calculate
-         * the height of a pyramid using B blocks as so:
-         * 
-         * The total amount of blocks in a pyramid is equal
-         * to 1 + 2 + ... + N, which equals N * (N + 1) / 2
-         * where N is the number of layers in the pyramid
-         * 
-         * Setting blocks equal to this, we get
-         * N * (N + 1) / 2 = B -> (N^2+N)/2 = B -> N^2+N=2B
-         * N^2 + N - 2B = 0
-         * 
-         * We can then solve for N using the quadratic formula:
-         *     -1 + sqrt(1 + 8B)
-         * N = -----------------   (plus since we don't want a negative result)
-         *            2
-         *            
-         * We then multiply N (rounded) by heightAvg 
-         * to get the total height of the pyramid
-        */
-        int N = Mathf.RoundToInt((-1 + Mathf.Sqrt(1 + 8*B))/2);
-        float height = N * heightAvg;
+        float height = 0;
+        foreach (BlockController block in blocks) height += block.height;
         return bounds[2] + initialTowerHeight + height * goalMultiplier;
     }
     
@@ -277,15 +253,30 @@ public class TowerManager : MonoBehaviour
     // Used when adding a block to the game
     public void AddBlocks(GameObject[] blocks)
     {
+        StartCoroutine(AddRoutine(blocks));
+    }
+
+    IEnumerator AddRoutine(GameObject[] blocks)
+    {
+        List<GameObject> newBlocks = new();
+
         foreach (GameObject obj in blocks)
         {
             GameObject newBlock = Instantiate(obj);
-            newBlock.transform.position = spawnPoint.position;
+            newBlock.SetActive(false);
+            newBlocks.Add(newBlock);
             BlockController block = newBlock.GetComponent<BlockController>();
             this.blocks.Add(block);
         }
         heightGoal = CalculateHeightGoal();
         UpdateGoal();
+
+        foreach (GameObject block in newBlocks)
+        {
+            block.SetActive(true);
+            block.transform.position = spawnPoint.transform.position;
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     void PlayGame()
