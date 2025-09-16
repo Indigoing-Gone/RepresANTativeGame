@@ -6,10 +6,10 @@ public class Constituant : MonoBehaviour, IInteractable
 {
     private Speaker speaker;
 
-    private bool canStartTower;
-    //Information about what blocks this ant has for the tower game
+    [SerializeField] private bool canStartTower = true;
+    [SerializeField] private GameObject[] blocks; //Information about what blocks this ant has for the tower game
 
-    public static event Action StartingTowerGame; //Modify to supply blocks
+    public static event Action<GameObject[]> StartingTowerGame; //Modify to supply blocks
 
     private void OnEnable()
     {
@@ -36,7 +36,7 @@ public class Constituant : MonoBehaviour, IInteractable
     {
         if (!canStartTower) return;
 
-        StartingTowerGame?.Invoke();
+        StartingTowerGame?.Invoke(blocks);
         canStartTower = false;
     }
 }

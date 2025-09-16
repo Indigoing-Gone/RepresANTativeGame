@@ -358,6 +358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingArea
       objectReference: {fileID: 0}
+    - target: {fileID: 7147574685378292896, guid: b5149388383c2ce4eac0029c2ddc8d7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8379321811395829922, guid: b5149388383c2ce4eac0029c2ddc8d7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.3
@@ -742,6 +746,10 @@ PrefabInstance:
     - target: {fileID: 7147574685378292896, guid: b5149388383c2ce4eac0029c2ddc8d7b, type: 3}
       propertyPath: m_Name
       value: BuildingArea (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147574685378292896, guid: b5149388383c2ce4eac0029c2ddc8d7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8379321811395829922, guid: b5149388383c2ce4eac0029c2ddc8d7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,6 +1430,7 @@ MonoBehaviour:
   width: 0.1
   alpha: 0.5
   spawnPoint: {fileID: 1402976331}
+  blocks: []
   timeToStable: 5
   countdown: 0
   stable: 0

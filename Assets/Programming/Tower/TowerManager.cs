@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class TowerManager : MonoBehaviour
 {
 
@@ -18,7 +20,7 @@ public class TowerManager : MonoBehaviour
 
     // Blocks
     public Transform spawnPoint;
-    private List<BlockController> blocks;
+    [SerializeField] private List<BlockController> blocks;
     int blockMask;
 
     // Completion checking
@@ -37,8 +39,22 @@ public class TowerManager : MonoBehaviour
     public float initialTowerHeight;
     private float heightGoal;
 
+    //Input events
+    public static event Action StartingTower;
+    public static event Action EndingTower;
+
     // Bounds (minX, maxX, minY, maxY)
     public Vector4 bounds;
+
+    private void OnEnable()
+    {
+        Constituant.StartingTowerGame += StartTowerGame;
+    }
+
+    private void OnDisable()
+    {
+        Constituant.StartingTowerGame -= StartTowerGame;
+    }
 
     private void Awake()
     {
@@ -67,6 +83,12 @@ public class TowerManager : MonoBehaviour
 
         countdown = timeToStable;
         countdownText.enabled = false;
+    }
+
+    private void StartTowerGame(GameObject[] blocks)
+    {
+        AddBlocks(blocks);
+        StartingTower?.Invoke();
     }
 
     void UpdateCountdownText()
@@ -146,7 +168,7 @@ public class TowerManager : MonoBehaviour
     // Returns if given block is inside building area
     bool IsInBuildingArea(BlockController block)
     {
-        if (!block.touchingGround) return true;
+        if (!block.touchingGround || buildingAreas.Count == 0) return true;
 
         float blockX = block.transform.position.x;
         foreach (GameObject area in buildingAreas)
@@ -172,7 +194,7 @@ public class TowerManager : MonoBehaviour
                 return false;
             }
         }
-        print("aaaa");
+        
         UpdateBuildingAreas(true);
         return true;
     }
