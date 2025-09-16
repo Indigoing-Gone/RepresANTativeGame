@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: 
   lines:
-  - name: 
-    text: This is the tutorial
+  - name: Tutorial
+    text: Now that you know what your constituANT cares about, you must balance their
+      needs!
+  - name: Tutorial
+    text: Pick up your constituANT's blocks with *left mouse* and rotate them with
+      *A/D* in order to balance them into a tall enough tower!
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0
