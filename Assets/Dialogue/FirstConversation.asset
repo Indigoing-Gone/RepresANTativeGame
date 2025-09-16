@@ -17,5 +17,5 @@ MonoBehaviour:
     text: This is the first
   - name: Ant
     text: We have multiple lines
-  nextConversation: {fileID: 11400000, guid: 418c47e0e8ce9674eada2423ee681307, type: 2}
+  nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 1
