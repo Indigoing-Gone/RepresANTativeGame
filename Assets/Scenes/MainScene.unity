@@ -841,6 +841,10 @@ PrefabInstance:
       value: Anthony
       objectReference: {fileID: 0}
     - target: {fileID: 4275561227250854680, guid: f4b11ca57dacc5c4e9267c307a8d9626, type: 3}
+      propertyPath: canStartTower
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4275561227250854680, guid: f4b11ca57dacc5c4e9267c307a8d9626, type: 3}
       propertyPath: blocks.Array.size
       value: 0
       objectReference: {fileID: 0}
