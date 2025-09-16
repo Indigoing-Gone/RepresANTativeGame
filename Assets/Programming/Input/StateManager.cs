@@ -1,3 +1,4 @@
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -11,16 +12,19 @@ enum GameState
 
 public class StateManager : MonoBehaviour
 {
-    [SerializeField] private GameState inputState;
+    [SerializeField] private GameState currentState;
+    [SerializeField] private GameState returnState;
     [SerializeField] private InputReader input;
     [SerializeField] private CinemachineCamera towerCamera;
+
+    public static event Action TowerStarted;
 
     private void Awake()
     {
         input.DisableAll();
         input.SetMovement();
 
-        inputState = GameState.None;
+        currentState = GameState.None;
         ChangeInput(GameState.Movement);
 
         DialogueController.ConversationStarted += OnConversationStarted;
@@ -30,13 +34,19 @@ public class StateManager : MonoBehaviour
         TowerManager.EndingTower += OnEndingTower;
     }
 
-    private void OnConversationStarted() => ChangeInput(GameState.Dialogue);
-    private void OnConversationEnded() => ChangeInput(GameState.Movement);
+    private void OnConversationStarted()
+    {
+        returnState = currentState;
+        ChangeInput(GameState.Dialogue);
+    }
+
+    private void OnConversationEnded() => ChangeInput(returnState);
 
     private void OnStartingTower()
     {
         ChangeInput(GameState.Tower);
         towerCamera.Priority = 2;
+        TowerStarted?.Invoke();
     }
 
     private void OnEndingTower()
@@ -47,11 +57,11 @@ public class StateManager : MonoBehaviour
 
     private void ChangeInput(GameState _state)
     {
-        if (inputState == _state) return;
-        inputState = _state;
+        if (currentState == _state) return;
+        currentState = _state;
 
-        if (inputState == GameState.Movement) input.SetMovement();
-        if (inputState == GameState.Dialogue) input.SetDialogue();
-        if (inputState == GameState.Tower) input.SetTower();
+        if (currentState == GameState.Movement) input.SetMovement();
+        if (currentState == GameState.Dialogue) input.SetDialogue();
+        if (currentState == GameState.Tower) input.SetTower();
     }
 }

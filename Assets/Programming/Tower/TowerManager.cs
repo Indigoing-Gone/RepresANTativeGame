@@ -48,12 +48,12 @@ public class TowerManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Constituant.StartingTowerGame += StartTowerGame;
+        Constituant.EnteringTower += OnEnteringTower;
     }
 
     private void OnDisable()
     {
-        Constituant.StartingTowerGame -= StartTowerGame;
+        Constituant.EnteringTower -= OnEnteringTower;
     }
 
     private void Awake()
@@ -85,9 +85,9 @@ public class TowerManager : MonoBehaviour
         countdownText.enabled = false;
     }
 
-    private void StartTowerGame(GameObject[] blocks)
+    private void OnEnteringTower(GameObject[] _blocks)
     {
-        AddBlocks(blocks);
+        AddBlocks(_blocks);
         StartingTower?.Invoke();
     }
 
