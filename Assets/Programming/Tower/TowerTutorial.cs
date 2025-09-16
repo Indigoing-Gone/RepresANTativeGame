@@ -27,5 +27,6 @@ public class TowerTutorial : MonoBehaviour
     {
         if (tutorialCompleted) return;
         speaker.EnterConversation();
+        tutorialCompleted = true;
     }
 }
