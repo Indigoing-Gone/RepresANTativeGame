@@ -30,6 +30,7 @@ public class TowerManager : MonoBehaviour
     public float timeToStable;
     public float countdown;
     private Coroutine countdownRoutine;
+    private Coroutine fadeRoutine;
     public bool stable;
 
     private List<GameObject> buildingAreas;
@@ -135,7 +136,10 @@ public class TowerManager : MonoBehaviour
         if (!complete) yield break;
         countdown = timeToStable;
         UpdateCountdownText();
-        StartCoroutine(FadeTextIn());
+
+        if (fadeRoutine != null) StopCoroutine(fadeRoutine);
+        fadeRoutine = StartCoroutine(FadeTextIn());
+
         while (countdown > 0)
         {
             yield return new WaitForSeconds(0.1f);
@@ -144,7 +148,10 @@ public class TowerManager : MonoBehaviour
             if (!complete)
             {
                 countdown = timeToStable;
-                StartCoroutine(FadeTextOut());
+
+                if (fadeRoutine != null) StopCoroutine(fadeRoutine);
+                fadeRoutine = StartCoroutine(FadeTextOut());
+
                 yield break;
             }
         }
@@ -157,8 +164,11 @@ public class TowerManager : MonoBehaviour
             EndingTower?.Invoke();
         }
         else countdown = timeToStable;
+
         UpdateCountdownText();
-        StartCoroutine(FadeTextOut());
+
+        if (fadeRoutine != null) StopCoroutine(fadeRoutine);
+        fadeRoutine = StartCoroutine(FadeTextOut());
         yield break;
     }
 
