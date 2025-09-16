@@ -22,6 +22,9 @@ public class BlockController : MonoBehaviour
     // Collision
     public bool touchingGround;
 
+    // Material
+    public Material[] mats;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,7 @@ public class BlockController : MonoBehaviour
         joint = GetComponent<TargetJoint2D>();
         joint.enabled = false;
         bounds = TowerManager.Instance.bounds;
+        GetComponent<SpriteRenderer>().material = mats[Random.Range(0, mats.Length)];
     }
 
     // When block is clicked

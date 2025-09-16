@@ -106,6 +106,11 @@ MonoBehaviour:
   rotationSpeed: 150
   height: 1
   touchingGround: 0
+  mats:
+  - {fileID: 2100000, guid: 35e41166c67e4284c87e8f03f4bb46f2, type: 2}
+  - {fileID: 2100000, guid: 59ebdd8f5c5139e439ae544f14723ed9, type: 2}
+  - {fileID: 2100000, guid: ce5c7371ee63b2145bd2a11384c995ce, type: 2}
+  - {fileID: 2100000, guid: 01edcfdb9de75e249b42964674d1a5aa, type: 2}
 --- !u!50 &3601624714677882968
 Rigidbody2D:
   serializedVersion: 5
