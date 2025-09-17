@@ -2209,7 +2209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 881753426373652167, guid: 5ad5713d0caf2a64fb3ef99f2b034d15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.4593067
+      value: 6.461921
       objectReference: {fileID: 0}
     - target: {fileID: 881753426373652167, guid: 5ad5713d0caf2a64fb3ef99f2b034d15, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3876,6 +3876,14 @@ PrefabInstance:
     - target: {fileID: 5860736549862154918, guid: 506d4372549d417408609633adde8f63, type: 3}
       propertyPath: speedThreshold
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860736549862154918, guid: 506d4372549d417408609633adde8f63, type: 3}
+      propertyPath: initialTowerHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860736549862154918, guid: 506d4372549d417408609633adde8f63, type: 3}
+      propertyPath: multDecreasePerBlock
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6679466855717489515, guid: 506d4372549d417408609633adde8f63, type: 3}
       propertyPath: m_Color.a
