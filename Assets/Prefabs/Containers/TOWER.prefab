@@ -226,7 +226,8 @@ MonoBehaviour:
   countdownText: {fileID: 0}
   complete: 0
   speedThreshold: 0.1
-  goalMultiplier: 0.7
+  startingGoalMultiplier: 0.7
+  multDecreasePerBlock: 0.025
   initialTowerHeight: 0
   bounds: {x: 0, y: 0, z: 0, w: 0}
 --- !u!120 &8095931520231552756

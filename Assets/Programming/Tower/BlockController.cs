@@ -32,7 +32,9 @@ public class BlockController : MonoBehaviour
         joint = GetComponent<TargetJoint2D>();
         joint.enabled = false;
         bounds = TowerManager.Instance.bounds;
-        GetComponent<SpriteRenderer>().material = mats[Random.Range(0, mats.Length)];
+
+        Material mat = mats[Random.Range(0, mats.Length)];
+        GetComponent<SpriteRenderer>().material = mat;
     }
 
     // When block is clicked

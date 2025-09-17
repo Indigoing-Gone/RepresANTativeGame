@@ -39,7 +39,8 @@ public class TowerManager : MonoBehaviour
 
     public bool complete;
     public float speedThreshold;
-    public float goalMultiplier;
+    public float startingGoalMultiplier;
+    public float multDecreasePerBlock;
     public float initialTowerHeight;
     private float heightGoal;
 
@@ -244,6 +245,7 @@ public class TowerManager : MonoBehaviour
     {
         float height = 0;
         foreach (BlockController block in blocks) height += block.height;
+        float goalMultiplier = startingGoalMultiplier - multDecreasePerBlock * blocks.Count;
         return bounds[2] + initialTowerHeight + height * goalMultiplier;
     }
     
