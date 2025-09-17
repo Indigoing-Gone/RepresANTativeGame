@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
-  m_Name: Tutorial
+  m_Name: TowerTutorial
   m_EditorClassIdentifier: 
   lines:
   - name: Tutorial

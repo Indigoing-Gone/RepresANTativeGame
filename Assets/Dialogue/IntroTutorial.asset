@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
+  m_Name: IntroTutorial
+  m_EditorClassIdentifier: 
+  lines:
+  - name: Tutorial
+    text: You are the Political RepresANTative. You love the Colony and want to see
+      it flourish because you were once a lone ant fleeing from a colony with a tyrannical
+      queen.
+  - name: Tutorial
+    text: You came to the Colony because you had heard that all ants had rights-
+      but soon learned that, though better than your previous colony, there was still
+      a lot of work to be done.
+  - name: Tutorial
+    text: "So, you committed yourself to a life as a representative, the voice of
+      the people. You want to build a colony where all ants have the right to life,
+      liberty, and happiness.\r"
+  - name: Tutorial
+    text: Now, as a part of your duties, you must talk with your constituANTs! Walk
+      around using *A/D* and jump with *Space*.
+  nextConversation: {fileID: 0}
+  shouldNextChangeSpeakerConversation: 0
