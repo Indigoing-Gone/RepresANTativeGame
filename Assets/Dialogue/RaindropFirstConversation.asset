@@ -12,6 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: RaindropFirstConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Raindrop
+    text: Yo!
+  - name: Raindrop
+    text: "Dude I was just thinking about you, it\u2019s crazy that you just passed
+      by!"
+  - name: Raindrop
+    text: "I was just planning on emailing my represANTatitves about the conflict
+      with the Birch Colony, but now that you\u2019re here, it would be great to
+      talk in person! Do you have a minute?"
+  - name: Raindrop
+    text: ' My siblings fought and died in the war against the Maple Leaf Colony.'
+  - name: Raindrop
+    text: "They believed in this colony and wanted to protect it, but their death
+      wasn\u2019t worth a little extra territory."
+  - name: Raindrop
+    text: This colony loses so many resources- including our own young ants who go
+      to battle- in these unnecessary conflicts.
+  - name: Raindrop
+    text: What does a little extra territory get us?
+  - name: Raindrop
+    text: "We have all of the resources we need for survival right here in our colony
+      borders, and anything we don\u2019t have we can get through peaceful trade."
+  - name: Raindrop
+    text: "I have been trying for years to get the government to listen to the ants
+      who are calling for an end to these wars, but it doesn\u2019t seem like anyone\u2019s
+      listening."
+  - name: Raindrop
+    text: "I\u2019m starting to lose hope, but I don\u2019t want to disrespect my
+      siblings\u2019 memory by giving up."
+  - name: Raindrop
+    text: "You seem like a cool dude- could you help me out?\r"
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

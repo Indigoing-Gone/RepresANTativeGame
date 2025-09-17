@@ -12,6 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: TwigFirstConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Twig
+    text: "Drone rights now! Drone rights- hey! Aren\u2019t you the represANTative?"
+  - name: Twig
+    text: " It\u2019s good luck that you were passing by, maybe you can help our
+      cause!\r"
+  - name: Twig
+    text: We are calling for more drone representation in the government.
+  - name: Twig
+    text: We have lived as second-class citizens for too long, and there is barely
+      anyone at the table who has our best interests in mind.
+  - name: Twig
+    text: "You know we\u2019ve never had a drone president in the history of the
+      colony?\r"
+  - name: Twig
+    text: "With the next election coming up, we are campaigning for candidates with
+      a focus on drone rights, and we\u2019re trying to get more drones to the polls
+      so they can take control of their future and rights in the colony!"
+  - name: Twig
+    text: "It\u2019s not a democracy if a whole group is underrepresented. Can we
+      count on your support and endorsement?\r"
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

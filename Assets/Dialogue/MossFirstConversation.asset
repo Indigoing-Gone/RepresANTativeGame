@@ -12,6 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: MossFirstConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Moss
+    text: Excuse me! Are you the represANTative?
+  - name: Moss
+    text: "I\u2019m Moss! I wasn\u2019t old enough to vote when you were elected,
+      but I know who you are. I\u2019ve seen you on the news- you seem pretty chill.\r"
+  - name: Moss
+    text: " I\u2019m a student at the colony university. I got in trouble yesterday
+      because of something I said in class."
+  - name: Moss
+    text: " It wasn\u2019t anything bad! Or at least, I don\u2019t think so. "
+  - name: Moss
+    text: The professor was just going on about how fertile workers have rights now
+      and how it was this great amendment to the Constitution.
+  - name: Moss
+    text: "And he was all grumpy about it and kept me after class to reprimand me
+      for \u201Cderailing the class\u201D with my \u201Cpersonal political ideologies\u201D
+      and said I would be losing participation points for the day..\r"
+  - name: Moss
+    text: " It\u2019s just not fair, I have the right to free speech. Would you support
+      me if I brought it up with the University?\r\r"
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

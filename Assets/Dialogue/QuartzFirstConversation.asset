@@ -12,6 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: QuartzFirstConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Quartz
+    text: Ho ho! Come over here a moment, young ant!
+  - name: Quartz
+    text: ' Pleasure to meet you! I am Quartz Sanders, CEO of Sandstone, Inc!'
+  - name: Quartz
+    text: I was actually on my way to the new excavation site- the boys are hard
+      at work expanding the north eastern neighborhoods and I like to check up on
+      their progress.
+  - name: Quartz
+    text: "If you\u2019re not supervising operations, you\u2019re not the one running
+      the company! That\u2019s what my Pops used to say."
+  - name: Quartz
+    text: "He never was the most poetic of ants, but he knew what he was doing when
+      it came to business.\r"
+  - name: Quartz
+    text: "Now I\u2019m glad I ran into you, young ant, because I\u2019ve had an
+      itch on my mind that I just can\u2019t scratch.\r"
+  - name: Quartz
+    text: "Business has been good these past years, and the economy has been growing
+      like I\u2019ve never seen it.\r"
+  - name: Quartz
+    text: "But my top smart ants have been warning that the time of prosperity seems
+      to be coming to a close.\r"
+  - name: Quartz
+    text: " Now I\u2019ve seen hard times, I was already CEO of Sandstone during
+      the economic crash when you were just a larva.\r"
+  - name: Quartz
+    text: " And let me tell you, I certainly don\u2019t want to see it again.\r"
+  - name: Quartz
+    text: " And let me tell you, I certainly don\u2019t want to see it again.\r"
+  - name: Quartz
+    text: "Now you tell those government fellas that they need to put back the economic
+      protections they thought up after what happened last time. \r"
+  - name: Quartz
+    text: "They\u2019ve been rolling them back recently as if no one remembers why
+      they were put there in the first place."
+  - name: Quartz
+    text: "They\u2019ve been rolling them back recently as if no one remembers why
+      they were put there in the first place."
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

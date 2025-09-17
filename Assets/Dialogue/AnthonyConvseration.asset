@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: AnthonyConvseration
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Anthony
+    text: 'We love our represANTative! '
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

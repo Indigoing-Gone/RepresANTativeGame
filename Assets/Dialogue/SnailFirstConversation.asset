@@ -12,6 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: SnailFirstConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Snail
+    text: "If you could hold these, I just need to tighten this strap\u2026 thank
+      you, you\u2019re a lifesaver. And has anyone ever told you that you look a
+      lot like our represANTative?\r"
+  - name: Snail
+    text: "What\u2019s that? You are the represANTative? Well that would explain
+      it, wouldn\u2019t it! "
+  - name: Snail
+    text: "Pleasure to meet you, my name is Snail Cabbageson. And while I have you
+      here\u2026 I\u2019m sure you know that the local school has once again had
+      to cut programs due to lack of funding."
+  - name: Snail
+    text: " My eldest loves painting, but there\u2019s no art class anymore because
+      they couldn\u2019t pay the teacher! "
+  - name: Snail
+    text: "It\u2019s honestly outrageous that the expensive private schools have
+      all these resources and the average ant can\u2019t get a proper education at
+      the public school. "
+  - name: Snail
+    text: "I don\u2019t know what to do! I can\u2019t afford to send all my larvae
+      to private school, but I want them to have the best education I can give them."
+  - name: Snail
+    text: "Do you think you could help get the necessary funding for the school?
+      Fundraising in the community can only do so much, I\u2019m afraid. "
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0
