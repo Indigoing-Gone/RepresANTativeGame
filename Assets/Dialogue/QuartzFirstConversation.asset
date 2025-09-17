@@ -42,15 +42,10 @@ MonoBehaviour:
   - name: Quartz
     text: " And let me tell you, I certainly don\u2019t want to see it again.\r"
   - name: Quartz
-    text: " And let me tell you, I certainly don\u2019t want to see it again.\r"
-  - name: Quartz
     text: "Now you tell those government fellas that they need to put back the economic
       protections they thought up after what happened last time. \r"
   - name: Quartz
     text: "They\u2019ve been rolling them back recently as if no one remembers why
       they were put there in the first place."
-  - name: Quartz
-    text: "They\u2019ve been rolling them back recently as if no one remembers why
-      they were put there in the first place."
-  nextConversation: {fileID: 0}
-  shouldNextChangeSpeakerConversation: 0
+  nextConversation: {fileID: 11400000, guid: 2da57ce4d3ee3bf429fbe49fc4118400, type: 2}
+  shouldNextChangeSpeakerConversation: 1

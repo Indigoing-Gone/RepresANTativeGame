@@ -37,5 +37,5 @@ MonoBehaviour:
   - name: Snail
     text: "Do you think you could help get the necessary funding for the school?
       Fundraising in the community can only do so much, I\u2019m afraid. "
-  nextConversation: {fileID: 0}
-  shouldNextChangeSpeakerConversation: 0
+  nextConversation: {fileID: 11400000, guid: d60d19ffd7f496d4d897bbdd06a6e1ec, type: 2}
+  shouldNextChangeSpeakerConversation: 1

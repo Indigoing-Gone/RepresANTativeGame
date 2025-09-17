@@ -33,5 +33,5 @@ MonoBehaviour:
   - name: Twig
     text: "It\u2019s not a democracy if a whole group is underrepresented. Can we
       count on your support and endorsement?\r"
-  nextConversation: {fileID: 0}
-  shouldNextChangeSpeakerConversation: 0
+  nextConversation: {fileID: 11400000, guid: 8a6f69e904a4e8448b71365456bda394, type: 2}
+  shouldNextChangeSpeakerConversation: 1
