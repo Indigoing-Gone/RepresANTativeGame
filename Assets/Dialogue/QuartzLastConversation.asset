@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: QuartzLastConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Quartz
+    text: "Well done, my good ant! With those economic protections back, I will feel
+      much better about the future of Sandstone, Inc. And remember- if you ever need
+      renovations or expansions, call me and I\u2019ll put the boys straight on it.
+      \r"
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

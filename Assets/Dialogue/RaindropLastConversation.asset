@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: RaindropLastConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Raindrop
+    text: "It means a lot, man. Thank you. Knowing I have your support gives me the
+      little encouragement I needed to keep standing up for what\u2019s right. I
+      love our colony- we need more ants like you taking care of it!\r"
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1211c0670444fb20b6684b4311bc, type: 3}
   m_Name: MossLastConversation
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - name: Moss
+    text: "Hey thanks, with your help I\u2019m sure to get my participation points
+      back! You are pretty chill!"
   nextConversation: {fileID: 0}
   shouldNextChangeSpeakerConversation: 0

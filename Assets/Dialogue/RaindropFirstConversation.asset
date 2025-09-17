@@ -44,5 +44,5 @@ MonoBehaviour:
       siblings\u2019 memory by giving up."
   - name: Raindrop
     text: "You seem like a cool dude- could you help me out?\r"
-  nextConversation: {fileID: 0}
-  shouldNextChangeSpeakerConversation: 0
+  nextConversation: {fileID: 11400000, guid: 78091e493ab0d114fbac7cfc137bd744, type: 2}
+  shouldNextChangeSpeakerConversation: 1
